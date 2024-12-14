@@ -315,3 +315,161 @@ Se utilizan para comparar valores:
 
 Con esto concluye la tercera clase. ¡Practica combinando operadores para resolver problemas complejos!
 
+------------------------------------------
+
+# **Clase 4: Función `input()` y `print()` con Formateo de Cadenas**
+
+### **1. Función `input()` para recibir datos**
+
+La función `input()` permite al usuario ingresar datos desde el teclado. Devuelve siempre una cadena de texto.
+
+#### **Sintaxis:**
+```python
+variable = input("Mensaje para el usuario: ")
+```
+
+#### **Ejemplo 1:** Solicitar el nombre del usuario
+```python
+nombre = input("¿Cómo te llamas? ")
+print("Hola, " + nombre)
+```
+
+#### **Ejemplo 2:** Ingresar dos números y sumarlos
+```python
+num1 = input("Ingresa el primer número: ")
+num2 = input("Ingresa el segundo número: ")
+suma = int(num1) + int(num2)
+print("La suma es:", suma)
+```
+*Nota:* Convertimos los valores a enteros usando `int()`.
+
+---
+
+### **2. Función `print()` y Formateo de Cadenas**
+
+La función `print()` muestra información en la consola.
+
+#### **Sintaxis básica:**
+```python
+print(valor1, valor2, ..., sep=" ", end="\n")
+```
+
+- **`sep=" "`**: Define el separador entre valores (por defecto, un espacio).
+- **`end="\n"`**: Define lo que sucede al final de la salida (por defecto, nueva línea).
+
+#### **Ejemplo 1:** Mostrar un mensaje simple
+```python
+print("Hola, Mundo")
+```
+
+#### **Ejemplo 2:** Mostrar múltiples valores separados por un guion
+```python
+print("Python", "es", "genial", sep="-")
+```
+
+#### **Ejemplo 3:** Mostrar una línea sin salto de línea
+```python
+print("Esto es una línea", end=" ")
+print("y esto sigue en la misma línea.")
+```
+
+---
+
+### **3. Formateo de Cadenas con `f-strings`**
+
+Los `f-strings` permiten incluir variables dentro de cadenas de texto de manera sencilla y legible.
+
+#### **Sintaxis:**
+```python
+print(f"Texto {variable} más texto")
+```
+
+#### **Ejemplo 1:** Mostrar un mensaje personalizado
+```python
+nombre = input("¿Cuál es tu nombre? ")
+edad = int(input("¿Cuántos años tienes? "))
+print(f"Hola {nombre}, tienes {edad} años.")
+```
+
+#### **Ejemplo 2:** Realizar cálculos directamente en el `f-string`
+```python
+num1 = int(input("Ingresa un número: "))
+num2 = int(input("Ingresa otro número: "))
+print(f"La suma de {num1} y {num2} es {num1 + num2}")
+```
+
+Con esto concluye la cuarta clase. ¡Practica combinando `input()` y `print()` para crear programas interactivos!
+
+---------------------------------------------
+**Clase 5: Condicionales (if, else, elif)**
+
+### **1. Estructura Condicional**
+Las estructuras condicionales permiten ejecutar diferentes bloques de código según una condición.
+
+#### **Sintaxis básica:**
+```python
+if condicion:
+    # Bloque de código si la condición es verdadera
+elif otra_condicion:
+    # Bloque de código si la segunda condición es verdadera
+else:
+    # Bloque de código si ninguna condición es verdadera
+```
+
+---
+
+### **2. Uso de `if`**
+Ejecuta un bloque de código si la condición es verdadera.
+
+#### **Ejemplo 1:** Verificar si un número es positivo
+```python
+numero = int(input("Ingresa un número: "))
+if numero > 0:
+    print(f"{numero} es un número positivo.")
+```
+
+---
+
+### **3. Uso de `if-else`**
+Define un bloque de código para cuando la condición es falsa.
+
+#### **Ejemplo 2:** Comprobar si un número es par o impar
+```python
+numero = int(input("Ingresa un número: "))
+if numero % 2 == 0:
+    print(f"{numero} es un número par.")
+else:
+    print(f"{numero} es un número impar.")
+```
+
+---
+
+### **4. Uso de `if-elif-else`**
+Permite evaluar múltiples condiciones en orden.
+
+#### **Ejemplo 3:** Clasificar una nota de examen
+```python
+nota = int(input("Ingresa tu nota: "))
+if nota >= 90:
+    print("Excelente")
+elif nota >= 80:
+    print("Muy bien")
+elif nota >= 70:
+    print("Bien")
+elif nota >= 60:
+    print("Aprobado")
+else:
+    print("Reprobado")
+```
+
+---
+
+### **5. Ejercicios Sencillos para Practicar**
+
+1. Escribe un programa que solicite un número y diga si es negativo, cero o positivo.
+2. Crea un programa que pida una contraseña y verifique si es correcta.
+3. Programa un sistema que solicite la edad del usuario y determine si puede votar.
+4. Haz un juego que compare un número secreto con un número ingresado por el usuario.
+
+¡Practica estos conceptos para fortalecer tus habilidades en Python! 🚀
+
