@@ -1,4 +1,18 @@
-**Clase 1: Introducción a Python y Configuración del Entorno**
+# Curso de pyton 
+En esta guia encontrara el material del curso
+* [Introduccion a Python](#clase1)
+* [Variables y Tipos de Datos](#clase2)
+* [Operadores Matemáticos y Lógicos](#clase3)
+* [Función Input y Print](#clase4)
+* [Condicionales (if, else, elif)](#clase5)
+* [Semana 2](#semana2)
+* [ Bucles `for` y `while](#clase6)
+
+
+
+# Clase1
+
+ **Clase 1: Introducción a Python y Configuración del Entorno**
 
 ### **1. Instalación de Python**
 
@@ -80,11 +94,10 @@
    if True:
        print("Esto está indentado correctamente")
    ```
+[Volver al inicio](#top)
 
-Con esto concluye la primera clase. ¡Estás listo para explorar más de Python!
 
-perfecto! he terminado la primera clase, dame ejercicios para practicar
-
+# clase2
 
 # **Clase 2: Variables y Tipos de Datos**
 
@@ -197,9 +210,9 @@ Python maneja varios tipos de datos básicos:
      # Esto generará un error
      numero_invalido = int("Hola")  # ValueError
      ```
+[Volver al inicio](#top)
 
-Con esto concluye la segunda clase. ¡Practica y sigue aprendiendo Python!
-
+# Clase3
 # **Clase 3: Operadores Matemáticos y Lógicos**
 
 ### **1. Operadores Matemáticos**
@@ -310,13 +323,11 @@ Se utilizan para comparar valores:
    ```python
    print(3 <= 4)  # True
    ```
+[Volver al inicio](#top)
 
----
+---------------------------------
 
-Con esto concluye la tercera clase. ¡Practica combinando operadores para resolver problemas complejos!
-
-------------------------------------------
-
+# Clase4
 # **Clase 4: Función `input()` y `print()` con Formateo de Cadenas**
 
 ### **1. Función `input()` para recibir datos**
@@ -397,10 +408,11 @@ num1 = int(input("Ingresa un número: "))
 num2 = int(input("Ingresa otro número: "))
 print(f"La suma de {num1} y {num2} es {num1 + num2}")
 ```
+[Volver al inicio](#top)
 
-Con esto concluye la cuarta clase. ¡Practica combinando `input()` y `print()` para crear programas interactivos!
+--------------------------------------
 
----------------------------------------------
+# Clase5
 **Clase 5: Condicionales (if, else, elif)**
 
 ### **1. Estructura Condicional**
@@ -471,5 +483,110 @@ else:
 3. Programa un sistema que solicite la edad del usuario y determine si puede votar.
 4. Haz un juego que compare un número secreto con un número ingresado por el usuario.
 
-¡Practica estos conceptos para fortalecer tus habilidades en Python! 🚀
+[Volver al inicio](#top)
 
+--------------------------------------
+
+
+# Semana2
+# Clase6
+
+# **Clase 6: Bucles `for` y `while`**
+
+Los bucles permiten repetir bloques de código varias veces según una condición, es decir, el buicle se repite hasta que se terminan los elementos de esa coleccion.
+---
+
+### **1. Bucle `for`**
+
+El bucle `for` itera sobre una secuencia (como una lista, cadena o rango de números).
+
+#### **Sintaxis:**
+```python
+for variable in secuencia:
+    # Código a ejecutar
+```
+
+#### **Ejemplo 1:** Recorrer una lista
+```python
+numeros = [1, 2, 3, 4, 5]
+for num in numeros:
+    print(num)
+```
+
+#### **Ejemplo 2:** Recorrer una cadena
+```python
+mensaje = "Hola"
+for letra in mensaje:
+    print(letra)
+```
+
+#### **Ejemplo 3:** Usar `range()`
+```python
+for i in range(5):
+    print(f"Número: {i}")
+```
+
+---
+
+### **2. Bucle `while`**
+
+El bucle `while` ejecuta el bloque de código mientras una condición sea verdadera.
+
+#### **Sintaxis:**
+```python
+while condicion:
+    # Código a ejecutar
+```
+
+#### **Ejemplo 4:** Contar hasta 5
+```python
+contador = 1
+while contador <= 5:
+    print(f"Contador: {contador}")
+    contador += 1
+```
+
+#### **Ejemplo 5:** Entrada de datos con `while`
+```python
+contraseña = "python"
+intento = ""
+while intento != contraseña:
+    intento = input("Introduce la contraseña: ")
+print("¡Acceso concedido!")
+```
+
+---
+
+### **3. Uso de Contadores y Acumuladores**
+
+- **Contador:** Variable que se incrementa de manera controlada.
+- **Acumulador:** Variable que acumula valores.
+
+#### **Ejemplo 6:** Sumar los primeros 5 números
+```python
+suma = 0
+for i in range(1, 6):
+    suma += i
+print(f"La suma es {suma}")
+```
+
+#### **Ejemplo 7:** Contar números pares
+```python
+pares = 0
+for i in range(1, 11):
+    if i % 2 == 0:
+        pares += 1
+print(f"Hay {pares} números pares entre 1 y 10")
+```
+
+---
+
+### **Consejos:**
+- Evita bucles infinitos verificando condiciones correctamente.
+- Usa `break` para salir de un bucle y `continue` para pasar a la siguiente iteración.
+
+[Volver al inicio](#top)
+
+----------------------------------
+
+# Clase7
