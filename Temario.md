@@ -489,7 +489,7 @@ else:
 
 
 # Semana2
-# Clase6
+# Clase1
 
 # **Clase 6: Bucles `for` y `while`**
 
@@ -590,3 +590,4 @@ print(f"Hay {pares} números pares entre 1 y 10")
 ----------------------------------
 
 # Clase7
+
