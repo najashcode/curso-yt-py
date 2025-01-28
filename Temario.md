@@ -591,3 +591,4 @@ print(f"Hay {pares} números pares entre 1 y 10")
 
 # Clase7
 
+https://www.youtube.com/watch?v=C55zjPlqdYw
