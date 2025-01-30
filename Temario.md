@@ -714,7 +714,7 @@ print(numeros)
 
 ### **Obtener la longitud de una lista**
 ```python
-print(len(frutas))
+print(len(frutas))print
 ```
 
 ---

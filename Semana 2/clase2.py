@@ -1,41 +1,100 @@
+import titulos 
+
+# Clase 2 Semana 2
+
 # Listas
-#Sintaxys
-mi_lista = []
+print("---------------------------------------------")
+print("        CLase 2 de la Segunda Semana")
+print("---------------------------------------------")
+
+#Sintaxys 
+# mi_lista = []
 
 frutas = ["Manzana", "Pera", "Mango"]
 
-mixta = ["manzana", 25, True, 3.14]
+mixta = [25, "Python", True, 3.14]
 
-print(frutas, mixta)
+print(frutas)
+print(mixta)
+
+# Acceder a la lista
 
 print(frutas[0])
-print(mixta[3])
 
-print(frutas[-3])
+print(frutas[-2])
 
-#lo que significa que de atas hacia adelante comienza en 1
+# Cambiar el valor de las listas
+#Agregar elementos
+frutas.append("Uvas")
 
-frutas[2] = "Banano"
 print(frutas)
 
-frutas.append("Mango")#agrega al final
-frutas.insert(1, "Mora")#inserta en el indice
+frutas.insert(1, "Kiwi")
 print(frutas)
 
-frutas.remove("Mango" )#Elimina por valor
+#Eliminar elementos
+
+print(frutas)
+frutas.remove("Uvas")
+print(frutas)
+
 ultimo = frutas.pop()
-print (frutas)
+print(ultimo)
+print(frutas)
 
-print("elemento eliminado: ", ultimo)
+frutas.pop()
+print(frutas)
 
-frutas.append ("Maracuya")
-frutas.append("Fresas")
-for i, fruta in enumerate(frutas):
-    print(f"Indice {i}: {fruta}")
+coches = ["Mazda", "Mercedez", "BMW", "Audi"]
 
-indice = 0
-while indice  < len(frutas):
-    print(frutas[indice])
-    indice += 1
+print(coches)
 
-    
+"""for carro in coches:
+    print(carro)
+
+"""
+
+for i, carro in enumerate(coches):
+    print(f"Indice {i}: {carro}")
+
+indice = 0 # Creamos variable inicializada en 0
+
+while indice < len(coches): # Mientras que indice sea menor a longitud de coches
+    print(coches[indice]) # Imprime el elemento en la posicion "indice" de la lista "Coches"
+    indice += 1 # Incrementa el valor de indice en 1
+
+ #indice = 0 → coches[0] → "Toyota" imprime Toyota
+ #indice = 1 → coches[1] → "Mercedez" Imprimre Mercedez
+print("----------------------")
+for carro in coches:
+    print (carro)
+
+
+# Concatenar listas
+
+lista1 = [1,2,3,4,5]
+lista2 = [6, 7, 8, 9]
+lista_completa = lista1 + lista2
+print(lista_completa)
+
+print("------------------------")
+frutas.append("Banana")
+print(frutas)
+
+if "Banana" in frutas:
+    print("La banana esta en la lista")
+else: print("NO Se encontro")
+
+#Ordenas las listas
+
+numeros = [3,7,5,1,4,2,6]
+numeros.sort()#Ordena de menor a mayor
+print(numeros)
+
+print(len(frutas))
+
+# 1. CREAR UNA LISTA CON LOS NOMBRES DE 5 AMIGOS
+
+amigos = ["Nana", "Sarah", "Dania", "Ian", "Branco"]
+print(amigos)
+
