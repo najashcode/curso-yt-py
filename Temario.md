@@ -591,4 +591,410 @@ print(f"Hay {pares} números pares entre 1 y 10")
 
 # Clase7
 
-https://www.youtube.com/watch?v=C55zjPlqdYw
+# **Día 2: Listas en Python**
+
+Las listas son estructuras de datos fundamentales en Python que permiten almacenar colecciones de elementos de manera ordenada y modificable.
+
+---
+
+## **1. Creación de Listas**
+
+En Python, una lista se define utilizando corchetes `[]`, y sus elementos se separan por comas:
+
+```python
+# Lista vacía
+mi_lista = []
+
+# Lista con elementos
+frutas = ["manzana", "banana", "cereza"]
+
+# Lista con diferentes tipos de datos
+mixta = [25, "Python", True, 3.14]
+
+print(frutas)
+print(mixta)
+```
+
+---
+
+## **2. Acceso a Elementos de una Lista**
+
+Cada elemento de una lista tiene un índice que empieza desde `0`.
+
+```python
+frutas = ["manzana", "banana", "cereza"]
+
+print(frutas[0])  # Acceder al primer elemento
+print(frutas[1])  # Acceder al segundo elemento
+print(frutas[-1]) # Acceder al último elemento
+```
+
+> **Nota:** Los índices negativos permiten acceder desde el final hacia el inicio.
+
+---
+
+## **3. Modificación de Listas**
+
+Puedes cambiar el valor de un elemento accediendo a su índice:
+
+```python
+frutas = ["manzana", "banana", "cereza"]
+frutas[1] = "pera"  # Modificar "banana" por "pera"
+print(frutas)
+```
+
+También puedes agregar o eliminar elementos:
+
+```python
+# Agregar elementos
+frutas.append("naranja")  # Agrega al final
+frutas.insert(1, "kiwi")  # Inserta en el índice 1
+
+# Eliminar elementos
+frutas.remove("pera")  # Elimina por valor
+ultimo = frutas.pop()  # Elimina el último y lo retorna
+
+print(frutas)
+print("Elemento eliminado:", ultimo)
+```
+
+---
+
+## **4. Iterar sobre Listas con Bucles**
+
+Puedes recorrer una lista con un bucle `for`:
+
+```python
+frutas = ["manzana", "banana", "cereza"]
+
+for fruta in frutas:
+    print(fruta)
+```
+
+Si necesitas acceder también a los índices, usa `enumerate()`:
+
+```python
+for i, fruta in enumerate(frutas):
+    print(f"Índice {i}: {fruta}")
+```
+
+Para recorrer una lista con `while`:
+
+```python
+indice = 0
+while indice < len(frutas):
+    print(frutas[indice])
+    indice += 1
+```
+
+---
+
+## **5. Otras Operaciones con Listas**
+
+### **Concatenación de listas**
+```python
+lista1 = [1, 2, 3]
+lista2 = [4, 5, 6]
+lista_completa = lista1 + lista2
+print(lista_completa)
+```
+
+### **Comprobación de existencia**
+```python
+if "banana" in frutas:
+    print("La banana está en la lista.")
+```
+
+### **Ordenar listas**
+```python
+numeros = [3, 1, 4, 1, 5, 9]
+numeros.sort()  # Ordena la lista de menor a mayor
+print(numeros)
+```
+
+### **Obtener la longitud de una lista**
+```python
+print(len(frutas))
+```
+
+---
+
+## **Ejercicio Práctico**
+
+1. Crea una lista con los nombres de 5 amigos.
+2. Imprime el tercer amigo de la lista.
+3. Agrega un nuevo amigo al final.
+4. Elimina el primer amigo de la lista.
+5. Recorre la lista con un bucle e imprime cada nombre en mayúsculas.
+
+```python
+amigos = ["Carlos", "Ana", "Luis", "Pedro", "Marta"]
+print(amigos[2])
+amigos.append("Sofía")
+del amigos[0]
+
+for amigo in amigos:
+    print(amigo.upper())
+```
+
+---
+
+### 🎯 **Conclusión:**
+- Las listas permiten almacenar y manipular colecciones de datos.
+- Se pueden modificar, recorrer y ordenar con facilidad.
+- Los bucles `for` y `while` facilitan el trabajo con listas.
+
+📌 **Siguiente Clase: Tuplas y Diccionarios en Python.**
+
+
+------------------------------------
+# Clase 8
+# **Clase 8: Tuplas y Conjuntos en Python**
+
+## **1. Diferencias entre Listas y Tuplas**
+
+### **Listas:**
+- Son mutables (pueden modificarse después de su creación).
+- Se definen con `[]` (corchetes).
+- Se pueden agregar, eliminar o cambiar elementos.
+
+```python
+lista = [1, 2, 3, 4]
+lista[1] = 99  # Modifica el segundo elemento
+print(lista)  # [1, 99, 3, 4]
+```
+
+### **Tuplas:**
+- Son inmutables (no pueden modificarse después de su creación).
+- Se definen con `()` (paréntesis).
+- Son más eficientes en términos de memoria y rendimiento.
+
+```python
+tupla = (1, 2, 3, 4)
+print(tupla[1])  # 2
+# tupla[1] = 99  # Esto generará un error porque las tuplas son inmutables.
+```
+
+### **¿Cuándo usar listas y cuándo usar tuplas?**
+- Usa **listas** cuando necesites modificar los datos.
+- Usa **tuplas** cuando los datos no deban cambiar y necesites mejor rendimiento.
+
+---
+
+## **2. Operaciones con Tuplas**
+
+1. **Acceder a elementos**
+```python
+tupla = (10, 20, 30)
+print(tupla[0])  # 10
+```
+
+2. **Desempaquetado de tuplas**
+```python
+a, b, c = tupla
+print(a, b, c)  # 10 20 30
+```
+
+3. **Concatenación de tuplas**
+```python
+tupla1 = (1, 2, 3)
+tupla2 = (4, 5, 6)
+tupla3 = tupla1 + tupla2
+print(tupla3)  # (1, 2, 3, 4, 5, 6)
+```
+
+4. **Conversión entre lista y tupla**
+```python
+lista = [1, 2, 3]
+tupla = tuple(lista)
+print(tupla)  # (1, 2, 3)
+```
+
+---
+
+## **3. Operaciones con Conjuntos**
+
+### **¿Qué es un conjunto?**
+- Un conjunto es una colección de elementos **únicos**.
+- Se define con `{}` (llaves) o con `set()`.
+- No mantiene un orden específico.
+
+```python
+conjunto = {1, 2, 3, 4, 4, 2}
+print(conjunto)  # {1, 2, 3, 4} (elimina duplicados)
+```
+
+### **Principales operaciones con conjuntos**
+
+1. **Agregar elementos**
+```python
+conjunto.add(5)
+print(conjunto)  # {1, 2, 3, 4, 5}
+```
+
+2. **Eliminar elementos**
+```python
+conjunto.remove(2)  # Elimina el 2
+print(conjunto)  # {1, 3, 4, 5}
+```
+
+3. **Operaciones matemáticas con conjuntos**
+
+- **Unión (`|`)**: Combina los elementos de dos conjuntos.
+- **Intersección (`&`)**: Encuentra los elementos comunes.
+- **Diferencia (`-`)**: Elementos que están en un conjunto pero no en otro.
+
+```python
+A = {1, 2, 3, 4}
+B = {3, 4, 5, 6}
+
+print(A | B)  # Unión: {1, 2, 3, 4, 5, 6}
+print(A & B)  # Intersección: {3, 4}
+print(A - B)  # Diferencia: {1, 2}
+```
+
+---
+
+## **4. Ejercicios Prácticos**
+
+1. **Crea una tupla con 5 elementos y accede al tercer elemento.**
+2. **Convierte una lista a tupla y viceversa.**
+3. **Crea dos conjuntos y realiza las operaciones de unión, intersección y diferencia.**
+4. **Añade y elimina elementos en un conjunto.**
+
+---
+
+¡Con esto ya dominas tuplas y conjuntos en Python! 🚀
+
+-----------------------------
+# Clase 9
+
+Aquí tienes la Clase 9 sobre **Diccionarios en Python**:  
+
+---
+
+# **Clase 9: Diccionarios en Python**  
+
+## **1. ¿Qué es un Diccionario en Python?**  
+Un diccionario es una estructura de datos que permite almacenar pares de **clave-valor**, similar a un diccionario real donde cada palabra (clave) tiene su significado (valor).  
+
+- Se define con llaves `{}`.  
+- Cada elemento tiene una clave única que apunta a un valor.  
+- Se pueden modificar, agregar o eliminar elementos.  
+
+Ejemplo de un diccionario:  
+```python
+# Crear un diccionario con datos de una persona
+persona = {
+    "nombre": "Danny",
+    "edad": 30,
+    "ciudad": "Bogotá"
+}
+print(persona)
+```
+**Salida:**  
+```
+{'nombre': 'Danny', 'edad': 30, 'ciudad': 'Bogotá'}
+```
+
+---
+
+## **2. Acceder a los valores de un diccionario**  
+Podemos acceder a un valor usando su clave entre corchetes `[]` o con el método `.get()`.  
+
+```python
+# Accediendo a valores
+print(persona["nombre"])  # Danny
+print(persona.get("edad"))  # 30
+```
+
+Si intentamos acceder a una clave que no existe con `[]`, Python dará un error. Para evitarlo, `get()` devuelve `None` si la clave no está.  
+
+```python
+print(persona.get("altura", "No especificado"))  # No especificado
+```
+
+---
+
+## **3. Modificar un Diccionario**  
+Podemos cambiar un valor accediendo a su clave y asignándole un nuevo valor.  
+
+```python
+persona["edad"] = 31  # Modificar la edad
+persona["profesion"] = "Programador"  # Agregar una nueva clave
+print(persona)
+```
+**Salida:**  
+```
+{'nombre': 'Danny', 'edad': 31, 'ciudad': 'Bogotá', 'profesion': 'Programador'}
+```
+
+---
+
+## **4. Eliminar elementos de un Diccionario**  
+Podemos eliminar elementos usando `del`, `.pop()` o `.popitem()`.  
+
+```python
+del persona["ciudad"]  # Eliminar 'ciudad'
+print(persona)
+
+edad = persona.pop("edad")  # Elimina 'edad' y la almacena en una variable
+print(edad)
+
+ultima = persona.popitem()  # Elimina el último elemento agregado
+print(ultima)
+```
+
+---
+
+## **5. Recorrer un Diccionario con un Bucle**  
+Podemos usar `for` para recorrer claves, valores o ambos.  
+
+```python
+# Iterar sobre claves
+for clave in persona:
+    print(clave, ":", persona[clave])
+
+# Iterar sobre valores
+for valor in persona.values():
+    print(valor)
+
+# Iterar sobre claves y valores
+for clave, valor in persona.items():
+    print(clave, ":", valor)
+```
+
+---
+
+## **6. Diccionarios Anidados**  
+Un diccionario puede contener otros diccionarios.  
+
+```python
+usuarios = {
+    "usuario1": {"nombre": "Ana", "edad": 25},
+    "usuario2": {"nombre": "Carlos", "edad": 28}
+}
+
+print(usuarios["usuario1"]["nombre"])  # Ana
+```
+
+---
+
+## **7. Ejercicios Prácticos**  
+
+### **Ejercicio 1:**  
+Crea un diccionario con información de un libro (título, autor, año) e imprime sus valores.  
+
+### **Ejercicio 2:**  
+Modifica el diccionario para agregar un nuevo dato (número de páginas) y luego elimínalo.  
+
+### **Ejercicio 3:**  
+Crea un diccionario que almacene nombres de países y sus capitales. Luego, usa un bucle para imprimir cada país con su capital.  
+
+---
+
+Esto cubre los fundamentos de **Diccionarios en Python**. 🚀 ¡Practica y sigamos avanzando!  
+
+
+-----------------------
+# Clase 10
