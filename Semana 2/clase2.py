@@ -98,3 +98,20 @@ print(len(frutas))
 amigos = ["Nana", "Sarah", "Dania", "Ian", "Branco"]
 print(amigos)
 
+# 2. Imprime el tercer amigo de la lista
+
+print(amigos[2])
+
+# 3. Agrega un nuevo amigo al final
+
+amigos.append("Jairo")
+
+# 4. Elimina el primer amigo de la lista.
+
+amigos.pop(0)
+
+# 5. Recorre la lista con un bucle e imprime cada nombre en mayusculas
+
+for friend in amigos:
+    print(friend.upper())
+

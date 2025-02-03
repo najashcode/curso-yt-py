@@ -714,7 +714,8 @@ print(numeros)
 
 ### **Obtener la longitud de una lista**
 ```python
-print(len(frutas))print
+print(len(frutas))
+
 ```
 
 ---
@@ -744,7 +745,7 @@ for amigo in amigos:
 - Se pueden modificar, recorrer y ordenar con facilidad.
 - Los bucles `for` y `while` facilitan el trabajo con listas.
 
-📌 **Siguiente Clase: Tuplas y Diccionarios en Python.**
+
 
 
 ------------------------------------
@@ -790,10 +791,69 @@ print(tupla[0])  # 10
 ```
 
 2. **Desempaquetado de tuplas**
+El **desempaquetado de tuplas** en Python es una técnica que permite asignar los valores de una tupla (o cualquier iterable) a múltiples variables de manera simultánea.  
+
+### **Ejemplo básico de desempaquetado**  
 ```python
-a, b, c = tupla
-print(a, b, c)  # 10 20 30
+tupla = (1, 2, 3)
+a, b, c = tupla  # Asignamos cada valor de la tupla a una variable
+print(a)  # 1
+print(b)  # 2
+print(c)  # 3
 ```
+
+---
+
+### **Casos de uso del desempaquetado**  
+
+#### **1️⃣ Desempaquetado en funciones con `return`**
+```python
+def coordenadas():
+    return (10, 20)
+
+x, y = coordenadas()
+print(x, y)  # 10 20
+```
+
+#### **2️⃣ Intercambio de valores sin variable temporal**
+```python
+a, b = 5, 10
+a, b = b, a  # Intercambiamos valores
+print(a, b)  # 10 5
+```
+
+#### **3️⃣ Desempaquetado parcial con `*` (operador de agrupación)**
+Si no sabes cuántos valores hay o solo necesitas algunos:
+```python
+valores = (1, 2, 3, 4, 5)
+a, *b, c = valores
+print(a)  # 1
+print(b)  # [2, 3, 4] (lista con los valores intermedios)
+print(c)  # 5
+```
+
+#### **4️⃣ Iterar con `enumerate()`**
+```python
+amigos = ["Nana", "Sarah", "Dania"]
+for indice, nombre in enumerate(amigos):
+    print(f"{indice}: {nombre}")
+```
+
+#### **5️⃣ Desempaquetado en diccionarios**
+```python
+diccionario = {"nombre": "Danny", "edad": 30}
+clave, valor = diccionario.popitem()  # Extrae un par clave-valor
+print(clave, valor)
+```
+
+---
+
+### **Resumen**
+✅ Asigna valores de una tupla a múltiples variables.  
+✅ Útil en funciones, intercambio de valores y bucles.  
+✅ Permite usar `*` para agrupar valores restantes en una lista.  
+
+
 
 3. **Concatenación de tuplas**
 ```python
