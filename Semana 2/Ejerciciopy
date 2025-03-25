@@ -1,0 +1,74 @@
+# Gestor de Tareas Personal
+
+# Lista de tareas (almacena diccionarios)
+tareas = []
+
+def mostrar_menu():
+    print("\n📌 Gestor de Tareas")
+    print("1. Agregar tarea")
+    print("2. Mostrar tareas")
+    print("3. Marcar tarea como completada")
+    print("4. Eliminar tarea")
+    print("5. Salir")
+
+def agregar_tarea():
+    descripcion = input("Descripción de la tarea: ")
+    prioridad = input("Prioridad (Alta, Media, Baja): ").capitalize()
+    tarea = {"descripcion": descripcion, "prioridad": prioridad, "estado": "Pendiente"}
+    tareas.append(tarea)
+    print("✅ Tarea agregada con éxito.")
+
+def mostrar_tareas():
+    if not tareas:
+        print("⚠️ No hay tareas registradas.")
+        return
+    print("\n📋 Lista de tareas:")
+    for i, tarea in enumerate(tareas, start=1):
+        print(f"{i}. {tarea['descripcion']} | Prioridad: {tarea['prioridad']} | Estado: {tarea['estado']}")
+
+def completar_tarea():
+    mostrar_tareas()
+    if not tareas:
+        return
+    try:
+        indice = int(input("Ingrese el número de la tarea completada: ")) - 1
+        if 0 <= indice < len(tareas):
+            tareas[indice]["estado"] = "Completada"
+            print("✅ Tarea marcada como completada.")
+        else:
+            print("⚠️ Número inválido.")
+    except ValueError:
+        print("⚠️ Ingresa un número válido.")
+
+def eliminar_tarea():
+    mostrar_tareas()
+    if not tareas:
+        return
+    try:
+        indice = int(input("Ingrese el número de la tarea a eliminar: ")) - 1
+        if 0 <= indice < len(tareas):
+            tareas.pop(indice)
+            print("🗑️ Tarea eliminada con éxito.")
+        else:
+            print("⚠️ Número inválido.")
+    except ValueError:
+        print("⚠️ Ingresa un número válido.")
+
+# Bucle principal
+while True:
+    mostrar_menu()
+    opcion = input("Seleccione una opción: ")
+
+    if opcion == "1":
+        agregar_tarea()
+    elif opcion == "2":
+        mostrar_tareas()
+    elif opcion == "3":
+        completar_tarea()
+    elif opcion == "4":
+        eliminar_tarea()
+    elif opcion == "5":
+        print("👋 Saliendo del gestor de tareas...")
+        break
+    else:
+        print("⚠️ Opción no válida. Intente nuevamente.")

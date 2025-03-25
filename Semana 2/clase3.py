@@ -128,3 +128,41 @@ B = {3, 4, 5, 6}
 print(A | B)  # Unión: {1, 2, 3, 4, 5, 6}
 print(A & B)  # Intersección: {3, 4}
 print(A - B)  # Diferencia: {1, 2}
+
+
+# Ejercicios
+
+#1. Crea una tupla con 5 elementos
+
+tuplita = (1, 3, 4, 5, 6)
+print(type(tuplita))
+print (tuplita[2])
+
+#2. Convierte una lista en tupla y viceversa
+
+lista43 = [12, 3, 4, 6, 77]
+print(type(lista43))
+
+ahoratupla = tuple(lista43)
+print(type(ahoratupla))
+print(ahoratupla)
+
+#3. Crea dos conjuntos y realiza las operaciones de union, interseccion, y diferencia
+
+conjunto1 = {1,2,3,4,5,6}
+conjunto2 = {21,43,54,66}
+
+print (conjunto1 | conjunto2)
+print(conjunto1 & conjunto2)
+print(conjunto1 - conjunto2)
+
+#4. Añade y elimina elementos en un conjunto
+
+operacion = {1,2,3,4,5}
+print(operacion)
+
+operacion.add(6)
+print(operacion)
+
+operacion.remove(2)
+print(operacion)
