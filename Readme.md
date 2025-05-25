@@ -604,9 +604,6 @@ Las listas son estructuras de datos fundamentales en Python que permiten almacen
 
 En Python, una lista se define utilizando corchetes `[]`, y sus elementos se separan por comas:
 
-```python
-# Lista vacía
-mi_lista = []
 
 # Lista con elementos
 frutas = ["manzana", "banana", "cereza"]

@@ -1,117 +1,63 @@
-import titulos 
+import titulos
 
-# Clase 2 Semana 2
+lista = ["Najash", 31, True, 3,14]
 
-# Listas
-print("---------------------------------------------")
-print("        CLase 2 de la Segunda Semana")
-print("---------------------------------------------")
+print (lista)
 
-#Sintaxys 
-# mi_lista = []
+#Indice siempre comienza en 0
+
+print (lista[0])
+#Najash
+
+print(lista[-2])
+#3
+
+lista[2] = "Code"
+print(lista) 
+
+lista.append("Youtube Curso")
+print (lista)
+
+lista.insert(1, "Bienvenidos")
+print(lista)
+
+lista.remove(31)
+print(lista)
+
+lista.pop()
+print(lista)
+
+usuario = ["Danny", "39917", 40 ]
+print(usuario)
+
+for usuarios in usuario:
+    print (usuarios)
+
+for i, usuarios in enumerate(usuario):
+    print(f"Indice{i}: {usuarios}")
+
 
 frutas = ["Manzana", "Pera", "Mango"]
 
-mixta = [25, "Python", True, 3.14]
+indice = 0
 
-print(frutas)
-print(mixta)
+while indice < len(frutas):
+    print(frutas[indice])
+    indice += 1
 
-# Acceder a la lista
+lista2 = [2,2,3,4,5,6]
+lista3 = [7,9,0]
+nuevaLista = lista2 + lista3
+print(nuevaLista)
 
-print(frutas[0])
+if "Piña" in frutas:
+    print ("La manzana Existe!")
+else:
+    print("El elemento No existe, intente con uno nuevo")
 
-print(frutas[-2])
-
-# Cambiar el valor de las listas
-#Agregar elementos
-frutas.append("Uvas")
-
-print(frutas)
-
-frutas.insert(1, "Kiwi")
-print(frutas)
-
-#Eliminar elementos
-
-print(frutas)
-frutas.remove("Uvas")
-print(frutas)
-
-ultimo = frutas.pop()
-print(ultimo)
-print(frutas)
-
-frutas.pop()
-print(frutas)
-
-coches = ["Mazda", "Mercedez", "BMW", "Audi"]
-
-print(coches)
-
-"""for carro in coches:
-    print(carro)
-
-"""
-
-for i, carro in enumerate(coches):
-    print(f"Indice {i}: {carro}")
-
-indice = 0 # Creamos variable inicializada en 0
-
-while indice < len(coches): # Mientras que indice sea menor a longitud de coches
-    print(coches[indice]) # Imprime el elemento en la posicion "indice" de la lista "Coches"
-    indice += 1 # Incrementa el valor de indice en 1
-
- #indice = 0 → coches[0] → "Toyota" imprime Toyota
- #indice = 1 → coches[1] → "Mercedez" Imprimre Mercedez
-print("----------------------")
-for carro in coches:
-    print (carro)
-
-
-# Concatenar listas
-
-lista1 = [1,2,3,4,5]
-lista2 = [6, 7, 8, 9]
-lista_completa = lista1 + lista2
-print(lista_completa)
-
-print("------------------------")
-frutas.append("Banana")
-print(frutas)
-
-if "Banana" in frutas:
-    print("La banana esta en la lista")
-else: print("NO Se encontro")
-
-#Ordenas las listas
-
-numeros = [3,7,5,1,4,2,6]
-numeros.sort()#Ordena de menor a mayor
+numeros = [3,5,7,8,1,2,4,0.9]
+print(numeros)
+numeros.sort()
 print(numeros)
 
 print(len(frutas))
-
-# 1. CREAR UNA LISTA CON LOS NOMBRES DE 5 AMIGOS
-
-amigos = ["Nana", "Sarah", "Dania", "Ian", "Branco"]
-print(amigos)
-
-# 2. Imprime el tercer amigo de la lista
-
-print(amigos[2])
-
-# 3. Agrega un nuevo amigo al final
-
-amigos.append("Jairo")
-
-# 4. Elimina el primer amigo de la lista.
-
-amigos.pop(0)
-
-# 5. Recorre la lista con un bucle e imprime cada nombre en mayusculas
-
-for friend in amigos:
-    print(friend.upper())
-
